@@ -6,13 +6,5 @@ pipeline {
                 echo "this if from feature branch"
             }
         }
-        stage('Build developer') {
-            when {
-                branch 'developer'
-            }
-            steps {
-                  echo "conditional expression applied for developer"
-            }
-        }
     }
 }
