@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('ci/cd pipeline') {
             steps {
-                echo "this if from master branch"
+                echo "this if from feature branch"
             }
         }
     }
