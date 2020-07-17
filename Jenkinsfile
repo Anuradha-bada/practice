@@ -1,4 +1,5 @@
 pipeline{
+   agents any
    stages{
      stage('Ci pipeline'){
         steps{
@@ -7,4 +8,4 @@ pipeline{
          }
       }
  }
- }
+}
