@@ -16,6 +16,7 @@ pipeline {
                     expression{env.BRANCH_NAME=='master'}
                     expression{env.BRANCH_NAME=='developer'}       
               }
+            }
             steps {
                   echo "env.BRANCH_NAME pushing"
                   rtUpload (
