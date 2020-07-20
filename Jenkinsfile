@@ -6,9 +6,9 @@ pipeline {
                 echo "this if from master branch"
             }
         }
-        stage('Build developer') {
+        stage('Build feature') {
             when {
-                branch 'developer'
+                branch 'feature'
             }
             steps {
                   echo "conditional expression applied for developer"
