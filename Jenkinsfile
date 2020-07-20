@@ -1,14 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('ci/cd pipeline') {
+        stage('Build') {
             steps {
-                echo "this if from master branch"
+                echo "Building project using maven"
+                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
-        stage('Build feature') {
+        stage('pushing to artifactory') {
             when {
-                branch 'feature'
+                branch 'developer' || 'master'
             }
             steps {
                   echo "conditional expression applied for developer"
